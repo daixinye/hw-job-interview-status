@@ -1,0 +1,30 @@
+{
+  "name": "hw-job-interview-status",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daixinye/hw-job-interview-status.git"
+  },
+  "author": "daixinye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daixinye/hw-job-interview-status/issues"
+  },
+  "homepage": "https://github.com/daixinye/hw-job-interview-status#readme",
+  "dependencies": {
+    "simple-fs-cache": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
