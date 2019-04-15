@@ -6,11 +6,13 @@ class HW {
   constructor (username, password) {
     this._username = username
     this._password = password
+
+    this._cacheKey = 'cookie-' + username
   }
   login () {
     return new Promise((resolve, reject) => {
       cache
-        .get('cookie')
+        .get(this._cacheKey)
         .then(cookie => resolve(cookie))
         .catch(e => {
           lib
@@ -30,7 +32,7 @@ class HW {
               const setCookie = data.headers['set-cookie']
               const cookies = setCookie.map(str => str.split(';').shift())
               const cookie = cookies.join(';')
-              cache.set('cookie', cookie, 60 * 60)
+              cache.set(this._cacheKey, cookie, 60 * 60)
               resolve(cookie)
             })
         })
